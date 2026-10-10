@@ -1,0 +1,282 @@
+/* 1. Design tokens*/
+:root {
+--color-bg: #fff7fb;
+--color-text: #43283a;
+--color-primary: #c94f88;
+--color-card: #ffffff;
+--color-border: #e8c4d6;
+
+--space-sm: 0.5rem;
+--space-md: 1rem;
+--space-lg: 2rem;
+--space-xl: 3rem;
+
+--text-small: 0.9rem;
+--text-body: 1rem;
+--text-heading: 2rem;
+}
+
+/*2. Base styles*/
+* {
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--text-body);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: var(--text-heading);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* 3. Header and navigation*/
+.site-header {
+    padding: var (--space-md);
+    background: var(--color-card);
+    border-bottom: 2px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap:var (--space-md);
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 4. Hero section*/
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-md);
+}
+
+.hero h2 {
+    margin-top: var(--space-sm);
+} 
+
+.hero img {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    color: var(--color-primary);
+    font-size: var(--text-small);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.button,
+button {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    color: white;
+    background: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background: var(--color-text);
+    color:white;
+}
+
+/* 5. Sections and reusable cards*/
+.section {
+    padding: var(--space-lg) var(--space-md);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+.card {
+    min-width: 0;
+    padding: var(--space-md);
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+.card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+/* 6. Timeline table*/
+.table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-card);
+}
+
+caption {
+    padding:var(--space-sm);
+    font-weight: bold;
+    text-align: left;
+}
+
+th, td {
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+th {
+    background: #f6e2ed;
+}
+
+/* 7. Contact form*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    max-width: 600px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    font: inherit;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* 8. Footer*/
+footer {
+    padding: var(--space-md);
+    text-align: center;
+    background: var(--color-card);
+    border-top: 2px solid var(--color-border);
+}
+
+footer p {
+    margin: var(--space-sm);
+}
+
+/* 9. Responsive design*/
+@media (min-width: 768px) {
+    .site-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .hero > div,
+    .hero > img {
+        flex: 1;
+        min-width: 0;
+    }
+    .hero img {
+        margin: 0;
+    }
+
+    section {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .hero,
+    .section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Border around the main website */
+main {
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    margin: var(--space-lg);
+    overflow: hidden;
+}

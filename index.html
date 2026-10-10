@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" href="css\css\style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Cutesy Art Corner!</h1>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#journey">My Art Journey</a></li>
+            </ul>
+            </nav>
+            </header>
+
+            <main>
+                <section id="about" class="about">
+                    <div>
+                        <p class="eyebrow">HELLO, I AM AN ART STUDENT^_^</p>
+                    <h2>Welcome to my little art corner! Tee-hee!!</h2>
+                    <p>Hello! I'm an artist who loves creating cute and whimsical art.
+                         My work is inspired by nature, fantasy, and the joy of everyday life.
+                          I hope my art brings a smile to your face!</p>
+                          <a class="button"
+                          href="#artworks">See My Cutesy Artworks</a>
+                          </div>
+
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfzkjsOVDOKuL--6sP002-dy87iGbPPO__1cXyDF_5GH5gn2OZyVRh6PDA&s=10" alt="Artist Portrait (Not exactly mine but I have to put sample images for the sake of this project)">
+                </section>
+
+                <section id="gallery" class="gallery">
+                    <h2>Get to see more of my Cutesky Artworks!</h2>
+                    <p>Here are some of my favorite pieces: (these are actually from my favorite artists)</p>
+
+                    <div class="card-grid">
+                        <article class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQccEDxgt-PPBKE8aXI3Znd7jGePYFyW2VrcKcbxMkGQFZIK8MMOiQqdQZ4&s=10" alt="Artwork 1">
+                            <h3>Character Art! :3</h3>
+                            <p>A cute and whimsical character design. (ericathw_)</p>
+
+                        </article>
+                        <article class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStVVWlZQEN9IpNtnkZfjGR3XHLYmCY-DaaB9tedkhmTI-T1W9MDRjRR4Uq&s=10" alt="Artwork 2">
+                            <h3>Color Study! :3</h3>
+                            <p>This piece helped me explore different color combinations! :D (ericathw_)</p>
+                            </article>
+
+                            <article class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFbeH9JVvlol9d6yG6P8EZZnvOnssk9_WCP_-gn1VNvy1Sj76NW2u2FRBy&s=10" alt="Artwork 3">
+                            <h3>Personal Artwork!</h3>
+                            <p>This is a personal piece I created. I really love Misa from Death Note! (ericathw_)</p>
+                            </article>
+                        
+                    </div>
+                </section>
+
+                <section id="journey" class="journey">
+                    <h2>My Art Journey</h2>
+                    <p>My art journey has been a wonderful adventure filled with learning and growth. 
+                        I started as a hobbyist, experimenting with different mediums and styles. 
+                        Over time, I honed my skills and developed my unique artistic voice. 
+                        I am constantly inspired by the world around me and strive to create art that resonates with others, hehe.</p>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <caption>Art Journey Timeline</caption>
+                                <thead>
+                                    <tr>
+                                        <th  scope="col">Skill</th>
+                                        <th scope="col">What I Practiced</th>
+                                        <th scope="col">Progress</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Digital Art</th>
+                                        <td>Drawing characters and environments.</td>
+                                        <td>Learning</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Traditional Art</th>
+                                            <td>Sketching and painting with various mediums.</td>
+                                            <td>Practicing</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Color Theory</th>
+                                            <td>Understanding color combinations and harmony.</td>
+                                            <td>Improving</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">Composition</th>
+                                            <td>Arranging elements in a visually appealing way.</td>
+                                            <td>Learning</td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            </section>
+
+                    
+                <section id="contact" class="contact">
+                    <h2>Say Helloooo!</h2>
+                    <p>Have a question or want to talk about art? I'd love to hear from you!</p>
+
+                    <form action="#" method="get">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="topic">What would you like to talk about?:3</label>
+                        <input type="text" id="topic" name="topic" required>
+
+                        <select id="topic" name="topic" required>
+                            <option value="">Choose a topic</option>
+                            <option value="art">Art</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+
+
+
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>&copy; 2024 Cutesy Art Corner. All rights reserved.</p>
+            </footer>
+        </body>
+    </html>
